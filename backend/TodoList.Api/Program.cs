@@ -13,6 +13,17 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//Cross origin resource sharing needed for Delete and Put requests
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(builder =>
+    {
+        builder.AllowAnyOrigin()
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
+
 //Configure the connection string from environment variable
 var connectionString = Environment.GetEnvironmentVariable("ConnectionStrings__DBCon") ?? builder.Configuration.GetConnectionString("DefaultConnection");
 
@@ -20,6 +31,9 @@ if (string.IsNullOrEmpty(connectionString))
 {
     throw new Exception("Connection string not found. Ensure the .env file is correctly configured and placed in the root directory.");
 }
+
+
+
 
 //Configure postgres connection
 builder.Services.AddDbContext<TodoListDbContext>(options => options.UseNpgsql(connectionString));
@@ -34,10 +48,14 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseCors();
 
 app.Run();

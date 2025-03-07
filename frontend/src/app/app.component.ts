@@ -59,17 +59,13 @@ export class AppComponent implements OnInit{
     });
   }
 
-  loadTask(Id: any) {
-    this.todolistService.getTodoListById(Id).subscribe((data) => {
-      this.task = data;
-    });
-  }
-
   addTask() {
     if (this.taskForm.valid) {
       this.todolistService.addTodoList(this.taskForm.value).subscribe({
         next: (response) => {
           console.log('Task added successfully', response);
+          this.loadTasks(); 
+          this.formReset();
         },
         error: (error) => {
           console.error('Error adding task', error);
@@ -83,6 +79,7 @@ export class AppComponent implements OnInit{
     this.todolistService.deleteTodoList(id).subscribe({
       next: (response) => {
         console.log('Task deleted successfully', response);
+        this.loadTasks(); 
       },
       error: (error) => {
         console.error('Error deleting task', error);
@@ -91,4 +88,8 @@ export class AppComponent implements OnInit{
   }
 
   editTask(id: any) {}
+
+  formReset() {
+    this.taskForm.reset();
+  }
 }
