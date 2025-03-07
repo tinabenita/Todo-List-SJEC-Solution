@@ -1,6 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormGroup,
+  FormsModule,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Task } from './model/Task';
 import { TodoListService } from './services/todo-list.service';
@@ -10,54 +16,79 @@ import { TodoListService } from './services/todo-list.service';
   standalone: true,
   imports: [RouterOutlet, FormsModule, CommonModule, ReactiveFormsModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
-export class AppComponent {
-
+export class AppComponent implements OnInit{
   taskForm: FormGroup;
 
   constructor(
     private todolistService: TodoListService,
     private fb: FormBuilder
-  ){
+  ) {
     this.taskForm = this.fb.group({
       Title: ['', [Validators.required]],
-      Details: ['', [Validators.required]]
+      Details: ['', [Validators.required]],
     });
-
   }
 
   tasks: Task[] = [];
   task: Task = {
-    Id: 0,
+    Id: null,
     Title: '',
-    Details: ''
+    Details: '',
   };
   editMode = false;
-  isLightMode : boolean = false;
+  isLightMode: boolean = false;
 
   toggleTheme() {
     this.isLightMode = !this.isLightMode;
   }
 
-  loadTasks(){
-    this.todolistService.getTodoList().subscribe((data) => {
-      this.tasks = data;
-    })
+  ngOnInit(): void {
+      this.loadTasks();
   }
 
-  loadTask(Id: any){
+  loadTasks() {
+    this.todolistService.getTodoList().subscribe((data) => {
+      this.tasks = data.map((taskItem: any) => ({
+        Id: taskItem.id,
+        Title: taskItem.title,
+        Details: taskItem.details,
+      }));
+      console.log(this.tasks);
+    });
+  }
+
+  loadTask(Id: any) {
     this.todolistService.getTodoListById(Id).subscribe((data) => {
       this.task = data;
-  })
-  
+    });
   }
 
-  addTask(){
+  addTask() {
+    if (this.taskForm.valid) {
+      this.todolistService.addTodoList(this.taskForm.value).subscribe({
+        next: (response) => {
+          console.log('Task added successfully', response);
+        },
+        error: (error) => {
+          console.error('Error adding task', error);
+        },
+      });
+    }
   }
 
-  deleteTask(id: number) {
-    this.tasks = this.tasks.filter(task => task.Id !== id);
+  deleteTask(id: any) {
+    console.log(id);
+    this.todolistService.deleteTodoList(id).subscribe({
+      next: (response) => {
+        console.log('Task deleted successfully', response);
+      },
+      error: (error) => {
+        console.error('Error deleting task', error);
+      },
+    });
   }
 
+  editTask(id: any) {}
 }
