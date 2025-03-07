@@ -49,7 +49,7 @@ public class TodoListController : ControllerBase
     }
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> PutTodoItem(Guid id, TodoListModel todoItem)
+    public async Task<IActionResult> UpdateTodoItem(Guid id, TodoListModel todoItem)
     {
         if (id != todoItem.Id)
         {

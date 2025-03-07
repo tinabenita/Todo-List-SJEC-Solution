@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{5CE1D7A4-0673-4128-8A79-49C630D138ED}|TodoList.Api\\TodoList.Api.csproj|solutionrelative:todolist.api\\controllers\\todolistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tiber\\Desktop\\sjec-todo-list\\backend\\TodoList.Api\\Migrations\\20250307093235_Migrations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TodoList.Api\\Migrations\\20250307093235_Migrations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5CE1D7A4-0673-4128-8A79-49C630D138ED}|TodoList.Api\\TodoList.Api.csproj|c:\\users\\tiber\\desktop\\sjec-todo-list\\backend\\todolist.api\\models\\todolistmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5CE1D7A4-0673-4128-8A79-49C630D138ED}|TodoList.Api\\TodoList.Api.csproj|solutionrelative:todolist.api\\models\\todolistmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5CE1D7A4-0673-4128-8A79-49C630D138ED}|TodoList.Api\\TodoList.Api.csproj|c:\\users\\tiber\\desktop\\sjec-todo-list\\backend\\todolist.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5CE1D7A4-0673-4128-8A79-49C630D138ED}|TodoList.Api\\TodoList.Api.csproj|solutionrelative:todolist.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CE1D7A4-0673-4128-8A79-49C630D138ED}|TodoList.Api\\TodoList.Api.csproj|c:\\users\\tiber\\desktop\\sjec-todo-list\\backend\\todolist.api\\migrations\\20250307093235_migrations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5CE1D7A4-0673-4128-8A79-49C630D138ED}|TodoList.Api\\TodoList.Api.csproj|solutionrelative:todolist.api\\migrations\\20250307093235_migrations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +46,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "20250307093235_Migrations.cs",
               "DocumentMoniker": "C:\\Users\\tiber\\Desktop\\sjec-todo-list\\backend\\TodoList.Api\\Migrations\\20250307093235_Migrations.cs",
               "RelativeDocumentMoniker": "TodoList.Api\\Migrations\\20250307093235_Migrations.cs",
@@ -54,12 +54,11 @@
               "RelativeToolTip": "TodoList.Api\\Migrations\\20250307093235_Migrations.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T09:32:35.507Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-07T09:32:35.507Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "TodoListModel.cs",
               "DocumentMoniker": "C:\\Users\\tiber\\Desktop\\sjec-todo-list\\backend\\TodoList.Api\\Models\\TodoListModel.cs",
               "RelativeDocumentMoniker": "TodoList.Api\\Models\\TodoListModel.cs",
@@ -67,12 +66,11 @@
               "RelativeToolTip": "TodoList.Api\\Models\\TodoListModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T09:12:57.481Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-07T09:12:57.481Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\tiber\\Desktop\\sjec-todo-list\\backend\\TodoList.Api\\Program.cs",
               "RelativeDocumentMoniker": "TodoList.Api\\Program.cs",
@@ -80,8 +78,7 @@
               "RelativeToolTip": "TodoList.Api\\Program.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAYwBoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T08:46:21.04Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-07T08:46:21.04Z"
             },
             {
               "$type": "Document",
@@ -91,7 +88,7 @@
               "RelativeDocumentMoniker": "TodoList.Api\\Controllers\\TodoListController.cs",
               "ToolTip": "C:\\Users\\tiber\\Desktop\\sjec-todo-list\\backend\\TodoList.Api\\Controllers\\TodoListController.cs",
               "RelativeToolTip": "TodoList.Api\\Controllers\\TodoListController.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAQwDMAAABRAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAQwDcAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-07T07:17:44.006Z",
               "EditorCaption": ""

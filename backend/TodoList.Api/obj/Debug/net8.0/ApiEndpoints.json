@@ -73,7 +73,7 @@
   },
   {
     "ContainingType": "TodoList.Api.Controllers.TodoListController",
-    "Method": "PutTodoItem",
+    "Method": "UpdateTodoItem",
     "RelativePath": "api/TodoList/{id}",
     "HttpMethod": "PUT",
     "IsController": true,

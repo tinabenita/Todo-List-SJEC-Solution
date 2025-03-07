@@ -24,59 +24,36 @@
   <!-- Add Task Form -->
   <div *ngIf="!editMode">
     <h2>Add New Task</h2>
-    <div class="form-group">
-      <label for="taskHeading">Task Title</label>
-      <input
-        id="taskHeading"
-        type="text"
-        [(ngModel)]="newTask.heading"
-        placeholder="Enter task title"
-      >
-    </div>
-    <div class="form-group">
-      <label for="taskDetails">Task Details</label>
-      <textarea
-        id="taskDetails"
-        [(ngModel)]="newTask.details"
-        placeholder="Enter task details"
-        rows="3"
-      ></textarea>
-    </div>
-    <button class="btn btn-primary" (click)="addTask()">Add Task</button>
-  </div>
-
-  <!-- Edit Task Form -->
-  <div *ngIf="editMode">
-    <h2>Edit Task</h2>
-    <div class="form-group">
-      <label for="editTaskHeading">Task Heading</label>
-      <input
-        id="editTaskHeading"
-        type="text"
-        [(ngModel)]="editingTask.heading"
-        placeholder="Enter task heading"
-      >
-    </div>
-    <div class="form-group">
-      <label for="editTaskDetails">Task Details</label>
-      <textarea
-        id="editTaskDetails"
-        [(ngModel)]="editingTask.details"
-        placeholder="Enter task details"
-        rows="3"
-      ></textarea>
-    </div>
-    <button class="btn btn-primary" (click)="updateTask()">Update Task</button>
-    <button class="btn btn-danger" (click)="cancelEdit()">Cancel</button>
+    <form [formGroup]="taskForm">
+      <div class="form-group">
+        <label for="taskHeading">Task Title</label>
+        <input
+          id="taskHeading"
+          type="text"
+          formControlName="Title"
+          placeholder="Enter task title"
+        >
+      </div>
+      <div class="form-group">
+        <label for="taskDetails">Task Details</label>
+        <textarea
+          id="taskDetails"
+          formControlName="Details"
+          placeholder="Enter task details"
+          rows="3"
+        ></textarea>
+      </div>
+      <button class="btn btn-primary" (click)="addTask()">Add Task</button>
+    </form>
   </div>
 
   <!-- Task Grid -->
   <div class="task-grid">
     <div class="task-card" *ngFor="let task of tasks">
-      <h3>{{ task.heading }}</h3>
-      <p>{{ task.details }}</p>
-      <button class="btn btn-primary" (click)="startEdit(task)">Edit</button>
-      <button class="btn btn-danger" (click)="deleteTask(task.id)">Delete</button>
+      <h3>{{ task.Title }}</h3>
+      <p>{{ task.Details }}</p>
+      <button class="btn btn-primary">Edit</button>
+      <button class="btn btn-danger" (click)="deleteTask(task.Id)">Delete</button>
     </div>
   </div>
 </div>

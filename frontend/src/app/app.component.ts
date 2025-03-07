@@ -1,66 +1,63 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-
-interface Task {
-  id: number;
-  heading: string;
-  details: string;
-}
+import { Task } from './model/Task';
+import { TodoListService } from './services/todo-list.service';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FormsModule, CommonModule],
+  imports: [RouterOutlet, FormsModule, CommonModule, ReactiveFormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+
+  taskForm: FormGroup;
+
+  constructor(
+    private todolistService: TodoListService,
+    private fb: FormBuilder
+  ){
+    this.taskForm = this.fb.group({
+      Title: ['', [Validators.required]],
+      Details: ['', [Validators.required]]
+    });
+
+  }
+
   tasks: Task[] = [];
-  newTask: Partial<Task> = {
-    heading: '',
-    details: ''
+  task: Task = {
+    Id: 0,
+    Title: '',
+    Details: ''
   };
   editMode = false;
-  editingTask: Task = { id: 0, heading: '', details: '' };
-  isLightMode = false;
+  isLightMode : boolean = false;
 
   toggleTheme() {
     this.isLightMode = !this.isLightMode;
   }
 
-  addTask() {
-    if (this.newTask.heading && this.newTask.details) {
-      const task: Task = {
-        id: Date.now(),
-        heading: this.newTask.heading,
-        details: this.newTask.details
-      };
-      this.tasks.push(task);
-      this.newTask = { heading: '', details: '' };
-    }
+  loadTasks(){
+    this.todolistService.getTodoList().subscribe((data) => {
+      this.tasks = data;
+    })
+  }
+
+  loadTask(Id: any){
+    this.todolistService.getTodoListById(Id).subscribe((data) => {
+      this.task = data;
+  })
+  
+  }
+
+  addTask(){
   }
 
   deleteTask(id: number) {
-    this.tasks = this.tasks.filter(task => task.id !== id);
+    this.tasks = this.tasks.filter(task => task.Id !== id);
   }
 
-  startEdit(task: Task) {
-    this.editMode = true;
-    this.editingTask = { ...task };
-  }
-
-  updateTask() {
-    const index = this.tasks.findIndex(t => t.id === this.editingTask.id);
-    if (index !== -1) {
-      this.tasks[index] = { ...this.editingTask };
-    }
-    this.cancelEdit();
-  }
-
-  cancelEdit() {
-    this.editMode = false;
-    this.editingTask = { id: 0, heading: '', details: '' };
-  }  
 }
