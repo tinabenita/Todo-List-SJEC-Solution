@@ -1,5 +1,13 @@
-﻿namespace TodoList.Api.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using TodoList.Api.Models;
 
-public class TodoListDbContext
+namespace TodoList.Api.Data;
+
+public class TodoListDbContext : DbContext
 {
+    public TodoListDbContext(DbContextOptions<TodoListDbContext> options) : base(options)
+    {
+    }
+    public DbSet<TodoListModel> TodoListItems { get; set; }
 }
+

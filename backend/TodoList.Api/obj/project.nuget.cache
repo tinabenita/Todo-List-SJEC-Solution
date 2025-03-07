@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4gVRXSy0C+s=",
+  "dgSpecHash": "UmB9bUlyqa0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\tiber\\Desktop\\sjec-todo-list\\backend\\TodoList\\TodoList.Api\\TodoList.Api.csproj",
+  "projectFilePath": "C:\\Users\\tiber\\Desktop\\sjec-todo-list\\backend\\TodoList.Api\\TodoList.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tiber\\.nuget\\packages\\dotnetenv\\3.1.1\\dotnetenv.3.1.1.nupkg.sha512",
     "C:\\Users\\tiber\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
@@ -21,6 +21,7 @@
     "C:\\Users\\tiber\\.nuget\\packages\\microsoft.entityframeworkcore.design\\9.0.2\\microsoft.entityframeworkcore.design.9.0.2.nupkg.sha512",
     "C:\\Users\\tiber\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\9.0.2\\microsoft.entityframeworkcore.relational.9.0.2.nupkg.sha512",
     "C:\\Users\\tiber\\.nuget\\packages\\microsoft.entityframeworkcore.relational.design\\1.1.0\\microsoft.entityframeworkcore.relational.design.1.1.0.nupkg.sha512",
+    "C:\\Users\\tiber\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\9.0.2\\microsoft.entityframeworkcore.tools.9.0.2.nupkg.sha512",
     "C:\\Users\\tiber\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\tiber\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\9.0.2\\microsoft.extensions.caching.abstractions.9.0.2.nupkg.sha512",
     "C:\\Users\\tiber\\.nuget\\packages\\microsoft.extensions.caching.memory\\9.0.2\\microsoft.extensions.caching.memory.9.0.2.nupkg.sha512",

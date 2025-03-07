@@ -11,6 +11,7 @@
           "DotNetEnv": "3.1.1",
           "Microsoft.EntityFrameworkCore": "9.0.2",
           "Microsoft.EntityFrameworkCore.Design": "9.0.2",
+          "Microsoft.EntityFrameworkCore.Tools": "9.0.2",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "9.0.4",
           "Npgsql.EntityFrameworkCore.PostgreSQL.Design": "1.1.0",
           "Swashbuckle.AspNetCore": "6.6.2"
@@ -409,6 +410,11 @@
             "assemblyVersion": "1.1.0.0",
             "fileVersion": "1.1.0.21115"
           }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Tools/9.0.2": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "9.0.2"
         }
       },
       "Microsoft.Extensions.ApiDescription.Server/6.0.5": {},
@@ -1553,6 +1559,13 @@
       "sha512": "sha512-fF0sVEUkoGeJutGIzwnYsJJ9o2hxEGJRpSaCxPq63rhSwn0hBmCwf9ET4QqYqO9Pc6+ODXenAQa095CWzuM4Kg==",
       "path": "microsoft.entityframeworkcore.relational.design/1.1.0",
       "hashPath": "microsoft.entityframeworkcore.relational.design.1.1.0.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Tools/9.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5D4LQ9zYexFOcq0WzXOCCnP74+s9mBGNjh5mtkWFzM/DbY+rpDqrXjPq7peob/ZHAAqK+9Pfv2VK+tNf8C6QaQ==",
+      "path": "microsoft.entityframeworkcore.tools/9.0.2",
+      "hashPath": "microsoft.entityframeworkcore.tools.9.0.2.nupkg.sha512"
     },
     "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
       "type": "package",

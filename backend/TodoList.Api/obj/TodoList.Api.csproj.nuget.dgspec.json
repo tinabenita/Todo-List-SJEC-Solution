@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tiber\\Desktop\\sjec-todo-list\\backend\\TodoList\\TodoList.Api\\TodoList.Api.csproj": {}
+    "C:\\Users\\tiber\\Desktop\\sjec-todo-list\\backend\\TodoList.Api\\TodoList.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tiber\\Desktop\\sjec-todo-list\\backend\\TodoList\\TodoList.Api\\TodoList.Api.csproj": {
+    "C:\\Users\\tiber\\Desktop\\sjec-todo-list\\backend\\TodoList.Api\\TodoList.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tiber\\Desktop\\sjec-todo-list\\backend\\TodoList\\TodoList.Api\\TodoList.Api.csproj",
+        "projectUniqueName": "C:\\Users\\tiber\\Desktop\\sjec-todo-list\\backend\\TodoList.Api\\TodoList.Api.csproj",
         "projectName": "TodoList.Api",
-        "projectPath": "C:\\Users\\tiber\\Desktop\\sjec-todo-list\\backend\\TodoList\\TodoList.Api\\TodoList.Api.csproj",
+        "projectPath": "C:\\Users\\tiber\\Desktop\\sjec-todo-list\\backend\\TodoList.Api\\TodoList.Api.csproj",
         "packagesPath": "C:\\Users\\tiber\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tiber\\Desktop\\sjec-todo-list\\backend\\TodoList\\TodoList.Api\\obj\\",
+        "outputPath": "C:\\Users\\tiber\\Desktop\\sjec-todo-list\\backend\\TodoList.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -60,6 +60,12 @@
               "version": "[9.0.2, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
