@@ -10,11 +10,12 @@ import {
 import { CommonModule } from '@angular/common';
 import { Task } from './model/Task';
 import { TodoListService } from './services/todo-list.service';
+import { EditTaskComponent } from "./components/edit-task/edit-task.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FormsModule, CommonModule, ReactiveFormsModule],
+  imports: [FormsModule, CommonModule, ReactiveFormsModule, EditTaskComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
@@ -56,6 +57,12 @@ export class AppComponent implements OnInit{
         Details: taskItem.details,
       }));
       console.log(this.tasks);
+    });
+  }
+
+  loadTask(Id: any) {
+    this.todolistService.getTodoListById(Id).subscribe((data) => {
+      this.task = data;
     });
   }
 
